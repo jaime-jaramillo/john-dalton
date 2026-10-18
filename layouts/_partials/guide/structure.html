@@ -1,0 +1,101 @@
+<section id="estructura" class="section-block" aria-labelledby="estructura-titulo">
+  <p class="eyebrow"><span class="section-number">01</span> Estructura con sentido</p>
+  <h2 id="estructura-titulo" class="section-heading">HTML describe; Hugo une las piezas</h2>
+  <p class="section-intro">HTML es el lenguaje que organiza el contenido. Sus etiquetas indican qué función cumple cada parte. Elegirlas por su significado se llama usar HTML semántico.</p>
+  <div class="guide-semantic-layout">
+    <div class="card semantic-map">
+      <h3>Mapa del documento</h3>
+      <p>Selecciona una pieza. Con teclado, llega con Tab y actívala con Intro.</p>
+      <div class="semantic-map-document">
+        <a href="#semantic-header" data-semantic-target="semantic-header" aria-controls="semantic-header">&lt;header&gt; <span>Presentación</span></a>
+        <a href="#semantic-nav" data-semantic-target="semantic-nav" aria-controls="semantic-nav">&lt;nav&gt; <span>Navegación</span></a>
+        <div class="semantic-map-main">
+          <a href="#semantic-main" data-semantic-target="semantic-main" aria-controls="semantic-main">&lt;main&gt; <span>Contenido principal</span></a>
+          <a href="#semantic-section" data-semantic-target="semantic-section" aria-controls="semantic-section">&lt;section&gt; <span>Un tema</span></a>
+          <a href="#semantic-article" data-semantic-target="semantic-article" aria-controls="semantic-article">&lt;article&gt; <span>Una ficha independiente</span></a>
+          <a href="#semantic-aside" data-semantic-target="semantic-aside" aria-controls="semantic-aside">&lt;aside&gt; <span>Información relacionada</span></a>
+        </div>
+        <a href="#semantic-footer" data-semantic-target="semantic-footer" aria-controls="semantic-footer">&lt;footer&gt; <span>Cierre del sitio</span></a>
+      </div>
+      <p class="muted">Sin JavaScript puedes seguir los enlaces y leer todas las piezas debajo.</p>
+    </div>
+    <div class="semantic-detail" role="region" aria-label="Explicación de la pieza seleccionada" aria-live="polite" aria-atomic="false">
+      <article id="semantic-header" class="card" data-semantic-panel>
+        <span class="badge">&lt;header&gt;</span>
+        <h3>La presentación del sitio</h3>
+        <p>Reúne la identidad del proyecto y su presentación. En la base de John Dalton se incluye con el parcial <code>header.html</code>.</p>
+        <pre tabindex="0" aria-label="Ejemplo de encabezado"><code>&lt;header&gt;
+  &lt;a href="/"&gt;John Dalton&lt;/a&gt;
+  &lt;p&gt;Aprendemos sobre salud visual&lt;/p&gt;
+&lt;/header&gt;</code></pre>
+        <p>Un parcial es una plantilla pequeña que se inserta dentro de otra.</p>
+      </article>
+      <article id="semantic-nav" class="card" data-semantic-panel>
+        <span class="badge">&lt;nav&gt;</span>
+        <h3>Los caminos de la página</h3>
+        <p>Agrupa los enlaces de navegación. Si hay varios menús, sus nombres deben permitir distinguirlos.</p>
+        <pre tabindex="0" aria-label="Ejemplo de navegación"><code>&lt;nav aria-label="Módulos de la guía"&gt;
+  &lt;a href="#estructura"&gt;HTML y Hugo&lt;/a&gt;
+  &lt;a href="#taller"&gt;Taller de código&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+        <p>Los enlaces reales de esta guía usan identificadores: nombres únicos como <code>taller</code>.</p>
+      </article>
+      <article id="semantic-main" class="card" data-semantic-panel>
+        <span class="badge">&lt;main&gt;</span>
+        <h3>Lo principal de cada página</h3>
+        <p>Contiene el contenido central. El encabezado y el pie compartidos quedan fuera de este elemento.</p>
+        <pre tabindex="0" aria-label="Ejemplo de contenido principal"><code>&lt;a href="#contenido"&gt;Saltar al contenido&lt;/a&gt;
+&lt;main id="contenido"&gt;
+  &lt;h1&gt;Guía para estudiantes&lt;/h1&gt;
+&lt;/main&gt;</code></pre>
+        <p>La base de Hugo ya añade <code>main</code>. Los módulos no deben repetirlo.</p>
+      </article>
+      <article id="semantic-section" class="card" data-semantic-panel>
+        <span class="badge">&lt;section&gt;</span>
+        <h3>Un grupo con un tema</h3>
+        <p>Separa una parte temática, como los módulos de esta guía. Un título ayuda a entender su propósito.</p>
+        <pre tabindex="0" aria-label="Ejemplo de sección"><code>&lt;section id="taller" aria-labelledby="taller-titulo"&gt;
+  &lt;h2 id="taller-titulo"&gt;Taller de código&lt;/h2&gt;
+  &lt;p&gt;Probemos un temporizador.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+        <p><code>aria-labelledby</code> toma el nombre de la sección del título indicado.</p>
+      </article>
+      <article id="semantic-article" class="card" data-semantic-panel>
+        <span class="badge">&lt;article&gt;</span>
+        <h3>Una pieza que tiene sentido por sí sola</h3>
+        <p>Sirve para contenido independiente. Una ficha de un programa de apoyo puede tener su propio título, descripción y enlace.</p>
+        <pre tabindex="0" aria-label="Ejemplo de artículo"><code>&lt;article&gt;
+  &lt;h3&gt;Temporizador de práctica&lt;/h3&gt;
+  &lt;p&gt;Un ejercicio de diez segundos.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+        <p>No toda caja visual necesita <code>article</code>: elige según el contenido.</p>
+      </article>
+      <article id="semantic-aside" class="card" data-semantic-panel>
+        <span class="badge">&lt;aside&gt;</span>
+        <h3>Una explicación complementaria</h3>
+        <p>Guarda contenido relacionado que se puede leer por separado, como una recomendación para desarrollar el ejercicio.</p>
+        <pre tabindex="0" aria-label="Ejemplo de información complementaria"><code>&lt;aside aria-labelledby="nota-titulo"&gt;
+  &lt;h2 id="nota-titulo"&gt;Antes de empezar&lt;/h2&gt;
+  &lt;p&gt;Guarda una copia de tus archivos.&lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+        <p>Su apariencia depende del CSS; no tiene que estar a la derecha.</p>
+      </article>
+      <article id="semantic-footer" class="card" data-semantic-panel>
+        <span class="badge">&lt;footer&gt;</span>
+        <h3>El cierre y la autoría</h3>
+        <p>Puede reunir información del proyecto y enlaces complementarios. En este sitio, <code>footer.html</code> contiene el cierre compartido.</p>
+        <pre tabindex="0" aria-label="Ejemplo de pie"><code>&lt;footer&gt;
+  &lt;p&gt;John Dalton · Proyecto educativo&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+        <p>No añadas una licencia ni un sello de cumplimiento que el proyecto no haya definido o comprobado.</p>
+      </article>
+    </div>
+  </div>
+  <div class="card guide-hugo">
+    <h3>Del archivo al navegador</h3>
+    <p>Hugo crea HTML a partir de contenido y plantillas. El archivo <code>content/guia-estudiantes.md</code> elige <code>student-guide</code> como plantilla. La base aporta el documento común; esta plantilla ordena sus parciales:</p>
+    <pre tabindex="0" aria-label="Plantilla real que ordena los módulos de esta guía"><code>{{ readFile "layouts/student-guide.html" }}</code></pre>
+    <p>El navegador recibe HTML, CSS y JavaScript; no necesita ejecutar Hugo. CSS define la presentación y JavaScript añade las interacciones.</p>
+    <p class="sources">Para ampliar: <a href="https://www.w3.org/WAI/tutorials/page-structure/regions/">regiones de una página, W3C (sitio externo)</a> · <a href="https://gohugo.io/templates/partial/">plantillas parciales, documentación de Hugo (sitio externo)</a>.</p>
+  </div>
+</section>

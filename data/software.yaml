@@ -1,0 +1,27 @@
+- nombre: NVDA
+  plataforma: Windows
+  descripcion: Lector de pantalla de NV Access. Presenta textos y controles mediante voz y puede trabajar con líneas braille compatibles.
+  nota: Gratuito y de código abierto.
+  url: https://www.nvaccess.org/download/
+  enlace: Conocer y descargar NVDA
+
+- nombre: JAWS
+  plataforma: Windows
+  descripcion: Lector de pantalla que permite usar aplicaciones, documentos y sitios web mediante voz o una línea braille.
+  nota: Producto comercial. Consulta sus licencias y las condiciones de acceso por ConVerTic.
+  url: https://vispero.com/jaws-screen-reader-software/
+  enlace: Conocer JAWS en Vispero
+
+- nombre: TalkBack
+  plataforma: Android
+  descripcion: Lector de pantalla de Google incluido en Android. Describe elementos y permite usar el dispositivo mediante gestos.
+  nota: Las opciones pueden variar según el dispositivo y su versión.
+  url: https://support.google.com/accessibility/android/answer/6283677?hl=es
+  enlace: Leer la guía oficial de TalkBack
+
+- nombre: Seeing AI
+  plataforma: Android e iOS
+  descripcion: Aplicación de Microsoft que utiliza la cámara para leer textos y describir imágenes u objetos con ayuda de inteligencia artificial.
+  nota: Aplicación gratuita. Sus descripciones pueden contener errores.
+  url: https://www.seeingai.com/
+  enlace: Explorar Seeing AI

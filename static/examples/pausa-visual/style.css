@@ -1,0 +1,29 @@
+/* Estilos autónomos: no necesitan los archivos del portal. */
+:root {
+  font-family: system-ui, sans-serif;
+  color: #121c27;
+  background: #f7f9ff;
+  line-height: 1.6;
+}
+* { box-sizing: border-box; }
+body { max-width: 48rem; margin: 0 auto; padding: 2rem; }
+h1, h2 { color: #00355f; line-height: 1.2; }
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.5rem; }
+section { margin-block: 2rem; }
+.eyebrow { color: #006972; font-weight: 700; }
+.timer { padding: 2rem; border: 1px solid #d5dce2; border-radius: 1rem; background: #fff; }
+.time-label { text-align: center; }
+.time { display: block; font-size: 3rem; font-weight: 750; font-variant-numeric: tabular-nums; color: #00355f; }
+.status { min-height: 3.2em; text-align: center; }
+.controls { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
+button { border: 2px solid #00355f; border-radius: .5rem; padding: .7rem 1.1rem; font: inherit; font-weight: 700; color: #fff; background: #00355f; cursor: pointer; }
+button.secondary { background: #fff; color: #00355f; }
+button:hover { background: #006972; border-color: #006972; color: #fff; }
+a { color: #00355f; }
+:focus-visible { outline: 3px solid #006972; outline-offset: 4px; }
+code { font-size: .95em; overflow-wrap: anywhere; }
+footer { border-top: 1px solid #d5dce2; margin-top: 2rem; }
+.skip-link { position: absolute; top: .5rem; left: .5rem; padding: .6rem; background: #fff; transform: translateY(-200%); }
+.skip-link:focus { transform: none; }
+[hidden] { display: none !important; }

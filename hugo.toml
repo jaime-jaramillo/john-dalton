@@ -1,4 +1,8 @@
 baseURL = 'http://localhost:1313/'
-locale = 'en-us'
-title = 'Hello world'
+locale = 'es-CO'
+defaultContentLanguage = 'es'
+title = 'John Dalton'
 disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']
+
+[params]
+description = 'Un proyecto escolar sobre salud visual, lentes y accesibilidad, con prestadores de atención en Pasto, Nariño.'

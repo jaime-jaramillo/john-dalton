@@ -1,11 +1,10 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ site.Title }}</title>
-  </head>
-  <body>
-    <h1>Hello world</h1>
-  </body>
-</html>
+{{ define "main" }}
+  {{ partial "sections/hero.html" . }}
+  {{ partial "sections/visual-health.html" . }}
+  {{ partial "sections/vision-tests.html" . }}
+  {{ partial "sections/lenses.html" . }}
+  {{ partial "sections/virtual-try-on.html" . }}
+  {{ partial "sections/providers.html" . }}
+  {{ partial "sections/assistive-software.html" . }}
+  {{ partial "sections/student-guide.html" . }}
+{{ end }}

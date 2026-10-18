@@ -1,0 +1,65 @@
+<section id="retos" class="section-block" aria-labelledby="retos-titulo">
+  <p class="eyebrow"><span class="section-number">05</span> Tu siguiente paso</p>
+  <h2 id="retos-titulo" class="section-heading">Tres retos para practicar</h2>
+  <p class="section-intro">Haz cada cambio en una copia del ejemplo. Primero intenta resolverlo; después abre la solución y comprueba el resultado en el navegador.</p>
+  <div class="card-grid three-columns guide-challenges">
+    <article class="card">
+      <span class="badge">CSS · Colores</span>
+      <h3>1. Crea una variante de alto contraste</h3>
+      <p>Añade la clase <code>alto-contraste</code> al <code>body</code> del ejemplo. Usa fondo negro y texto blanco, incluidos la tarjeta y sus títulos. Conserva un foco visible.</p>
+      <details><summary>Ver una solución</summary>
+        <p>Cambia la etiqueta de apertura a <code>&lt;body class="alto-contraste"&gt;</code> y añade al final de <code>style.css</code>:</p>
+        <pre tabindex="0" aria-label="Solución CSS de alto contraste"><code>body.alto-contraste,
+.alto-contraste .timer {
+  background: #000;
+  color: #fff;
+}
+.alto-contraste h1,
+.alto-contraste h2,
+.alto-contraste .eyebrow,
+.alto-contraste .time,
+.alto-contraste a {
+  color: #fff;
+}
+.alto-contraste :focus-visible {
+  outline-color: #ff0;
+}
+.alto-contraste .skip-link {
+  background: #000;
+}</code></pre>
+        <p>Revisa también los botones y el salto al contenido. La combinación negro/blanco tiene contraste 21:1; eso describe ese par, no una evaluación del sitio completo.</p>
+      </details>
+    </article>
+    <article class="card">
+      <span class="badge">HTML · Estructura</span>
+      <h3>2. Añade una ficha con sentido</h3>
+      <p>Dentro de <code>main</code>, después de las secciones, añade una ficha independiente sobre el experimento. Dale un título y explica qué has cambiado sin prometer resultados médicos.</p>
+      <details><summary>Ver una solución</summary>
+        <pre tabindex="0" aria-label="Solución HTML de una ficha"><code>&lt;article&gt;
+  &lt;h2&gt;Mi prueba de veinte segundos&lt;/h2&gt;
+  &lt;p&gt;Cambié data-duration a 20.
+  Probé iniciar, pausar y reiniciar
+  usando solo el teclado.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+        <p>El título tiene nivel <code>h2</code> porque depende del título principal <code>h1</code>. La ficha cuenta un experimento completo.</p>
+      </details>
+    </article>
+    <article class="card">
+      <span class="badge">JavaScript · Estados</span>
+      <h3>3. Mejora el aviso final</h3>
+      <p>Cambia el mensaje que aparece al terminar. Conserva <code>role="status"</code>, no muevas el foco y evita avisos cada segundo. Comprueba que puedes iniciar otra cuenta.</p>
+      <details><summary>Ver una solución</summary>
+        <p>En <code>script.js</code>, reemplaza solo el mensaje dentro de <code>if (restante === 0)</code> por:</p>
+        <pre tabindex="0" aria-label="Solución de mensaje de estado"><code>estado.textContent =
+  'La práctica terminó. Puedes iniciar '
+  + 'otra cuenta cuando quieras.';</code></pre>
+        <p>Conserva <code>detener()</code>, <code>terminado = true</code> y el cambio de nombre del botón. Así el temporizador puede volver a empezar.</p>
+        <p>Ampliación opcional: si exploras un sonido, permite que la persona lo solicite con un botón. No lo reproduzcas automáticamente ni lo uses como único aviso.</p>
+      </details>
+    </article>
+  </div>
+  <div class="guide-closing">
+    <div><p class="eyebrow">Comparte lo que comprobaste</p><h2>Tu explicación también forma parte del proyecto</h2><p>Cuenta qué cambiaste, cómo lo probaste y qué queda pendiente. Otra persona debe poder repetir tu prueba.</p></div>
+    <div class="guide-actions"><a class="button" href="{{ "" | relURL }}">Explorar el portal John Dalton</a><a class="text-link" href="#guia-titulo">Volver al inicio de la guía</a></div>
+  </div>
+</section>

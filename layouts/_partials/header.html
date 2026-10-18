@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="site-shell header-brand-row">
+    <a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="John Dalton, inicio del portal">
+      <img src="{{ "images/logo.jpeg" | relURL }}" alt="" width="64" height="52">
+      <span><strong>JD John Dalton</strong><small>Salud visual · Pasto, Nariño</small></span>
+    </a>
+    <span class="initiative-label"><span aria-hidden="true">✦</span> Una iniciativa educativa escolar</span>
+  </div>
+  <nav class="site-shell site-nav" aria-label="Navegación principal">
+    <a href="{{ site.Home.RelPermalink }}#salud-visual">Salud visual</a>
+    <a href="{{ site.Home.RelPermalink }}#tests-visuales">Tests orientativos</a>
+    <a href="{{ site.Home.RelPermalink }}#guia-de-lentes">Guía de lentes</a>
+    <a href="{{ site.Home.RelPermalink }}#probadores-virtuales">Probadores virtuales</a>
+    <a href="{{ site.Home.RelPermalink }}#prestadores">Prestadores en Pasto</a>
+    <a href="{{ site.Home.RelPermalink }}#software-accesible">Software accesible</a>
+    <a class="nav-guide" href="{{ "guia-estudiantes/" | relURL }}"{{ if eq .Layout "student-guide" }} aria-current="page"{{ end }}>Guía para estudiantes <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>

@@ -1,0 +1,31 @@
+{{/* Cada ficha toma sus datos del archivo providers.yaml. */}}
+<section id="prestadores" class="section-block" aria-labelledby="titulo-prestadores">
+  <p class="eyebrow"><span class="section-number">05</span> Atención cerca de ti</p>
+  <h2 id="titulo-prestadores" class="section-heading">Salud visual en Pasto, Nariño</h2>
+  <p class="section-intro">Estas fichas reúnen datos publicados por los propios prestadores. Confirma directamente sus horarios, servicios y requisitos para pedir una cita.</p>
+  <div class="provider-layout">
+    <div class="provider-list">
+      {{ range hugo.Data.providers }}
+        <article class="card provider-card">
+          <span class="badge">{{ .servicio }}</span>
+          <h3>{{ .nombre }}</h3>
+          <p>{{ .descripcion }}</p>
+          <p class="provider-address"><strong>En Pasto:</strong> {{ .direccion }}</p>
+          <a class="button" href="{{ .url }}">Consultar el sitio oficial ↗</a>
+          <p class="verification"><a href="{{ .fuente }}">Fuente del prestador ↗</a> · Datos consultados el {{ .verificado }}</p>
+        </article>
+      {{ end }}
+    </div>
+    <aside class="consultation-guide">
+      <h3>Antes de tu consulta</h3>
+      <ol class="care-list">
+        <li>Anota qué notas al leer, estudiar o mirar de lejos.</li>
+        <li>Lleva tus gafas y fórmulas anteriores, si las tienes.</li>
+        <li>Pregunta cómo acceder a la atención con tu EPS o de forma particular.</li>
+        <li>Si eres menor de edad, consulta los requisitos de acompañamiento.</li>
+      </ol>
+      <p>La inclusión en esta lista no es una calificación ni una recomendación comercial.</p>
+      <a class="text-link" href="https://www.doctoralia.co/oftalmologo/pasto">Más opciones en Doctoralia Pasto ↗</a>
+    </aside>
+  </div>
+</section>

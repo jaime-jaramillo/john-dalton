@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ or .Description site.Params.description }}">
+<title>{{ if .IsHome }}Salud visual en Pasto{{ else }}{{ .Title }}{{ end }} · {{ site.Title }}</title>
+<link rel="icon" href="{{ "images/logo.jpeg" | relURL }}" type="image/jpeg">
+<link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+<script src="{{ "js/main.js" | relURL }}" defer></script>
+<script src="{{ "examples/pausa-visual/script.js" | relURL }}" defer></script>
+{{ if eq .Layout "student-guide" }}
+  <link rel="stylesheet" href="{{ "css/guide.css" | relURL }}">
+  <script src="{{ "js/guide.js" | relURL }}" defer></script>
+{{ end }}

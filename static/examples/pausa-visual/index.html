@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pausa visual · Ejemplo John Dalton</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header>
+    <p class="eyebrow">John Dalton · Laboratorio web</p>
+    <h1>Un temporizador que puedes modificar</h1>
+    <p>Un ejemplo educativo con HTML, CSS y JavaScript, sin bibliotecas ni conexión a internet.</p>
+  </header>
+  <main id="contenido">
+    <section class="timer" data-timer data-duration="10" aria-labelledby="timer-titulo">
+      <h2 id="timer-titulo">Prueba de diez segundos</h2>
+      <p>Inicia la cuenta, haz una pausa y reanuda cuando quieras. Reiniciar devuelve el tiempo al valor original y detiene la cuenta.</p>
+      <p class="time-label">Tiempo restante <span class="time" data-timer-display>00:10</span></p>
+      <p class="status" data-timer-status role="status">Activa JavaScript para usar el temporizador.</p>
+      <div class="controls" data-timer-controls hidden>
+        <button type="button" data-timer-toggle>Iniciar</button>
+        <button type="button" class="secondary" data-timer-reset>Reiniciar</button>
+      </div>
+      <noscript><p>Puedes seguir leyendo y editar el código. La cuenta necesita JavaScript.</p></noscript>
+    </section>
+    <section aria-labelledby="experimento-titulo">
+      <h2 id="experimento-titulo">Haz un experimento</h2>
+      <p>Cambia <code>data-duration="10"</code> por <code>data-duration="20"</code>, guarda este archivo y vuelve a abrirlo. El número expresa la duración en segundos.</p>
+      <p>El aviso final es un recordatorio de práctica; este ejemplo no evalúa tu visión ni reemplaza una valoración profesional.</p>
+    </section>
+  </main>
+  <footer><p>John Dalton · Ejemplo para aprender programación y accesibilidad.</p></footer>
+</body>
+</html>

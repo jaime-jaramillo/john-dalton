@@ -1,0 +1,47 @@
+<section id="accesibilidad" class="section-block guide-tinted" aria-labelledby="accesibilidad-titulo">
+  <p class="eyebrow"><span class="section-number">02</span> Diseñar y comprobar</p>
+  <h2 id="accesibilidad-titulo" class="section-heading">La accesibilidad se pone a prueba</h2>
+  <p class="section-intro">Las WCAG son pautas de accesibilidad del contenido web. Ayudan a revisar decisiones concretas. Un color o una herramienta automática no demuestra que todo un sitio sea accesible.</p>
+  <div class="card-grid guide-principles">
+    <article class="card">
+      <span class="badge">01 · Teclado</span><h3>Haz todo sin ratón</h3>
+      <p>Recorre los enlaces y botones con Tab y Mayús+Tab. Prueba Intro en enlaces y botones, y Espacio en botones. El foco, que indica dónde estás, debe verse siempre.</p>
+      <a class="text-link" href="https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html">Teclado en W3C (externo)</a>
+    </article>
+    <article class="card">
+      <span class="badge">02 · Texto</span><h3>Amplía y vuelve a leer</h3>
+      <p>Prueba el zoom al 200 %. Comprueba que puedes leer y usar los controles. <code>rem</code> es una unidad relativa al tamaño base del texto; ayuda a ajustar tamaños, pero el resultado hay que probarlo.</p>
+      <a class="text-link" href="https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html">Ampliación en W3C (externo)</a>
+    </article>
+    <article class="card">
+      <span class="badge">03 · Mensajes</span><h3>Informa sin interrumpir</h3>
+      <p>Un lector de pantalla presenta el contenido mediante voz o braille. <code>role="status"</code> permite anunciar un cambio, como el fin de la cuenta, sin mover el foco. No anuncies cada segundo.</p>
+      <a class="text-link" href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html">Mensajes de estado en W3C (externo)</a>
+    </article>
+    <article class="card">
+      <span class="badge">04 · Imágenes</span><h3>Describe su propósito</h3>
+      <p>El texto <code>alt</code> depende de la función de la imagen. Describe la información relevante; para una imagen decorativa usa <code>alt=""</code>. No hay un mínimo universal de palabras.</p>
+      <a class="text-link" href="https://www.w3.org/WAI/tutorials/images/decision-tree/">Decidir el alt con W3C (externo)</a>
+    </article>
+  </div>
+  <div class="card guide-contrast">
+    <h3>Comparación estática de contraste</h3>
+    <p>El contraste compara la luminosidad del texto y el fondo. Para texto normal, el criterio 1.4.3 pide al menos <strong>4,5:1</strong>; para texto grande, <strong>3:1</strong>. Estos pares se calcularon con la fórmula de luminancia relativa de WCAG.</p>
+    <div class="guide-contrast-grid">
+      <figure>
+        <div class="contrast-swatch contrast-blue">Aprender con claridad</div>
+        <figcaption><strong>12,54:1</strong> · Texto blanco sobre azul <code>#00355f</code>. Supera 4,5:1.</figcaption>
+      </figure>
+      <figure>
+        <div class="contrast-swatch contrast-teal">Aprender con claridad</div>
+        <figcaption><strong>6,43:1</strong> · Texto blanco sobre verde azulado <code>#006972</code>. Supera 4,5:1.</figcaption>
+      </figure>
+      <figure>
+        <div class="contrast-swatch contrast-low" aria-hidden="true">Ejemplo difícil de leer</div>
+        <figcaption><strong>2,32:1 · No alcanza 4,5:1.</strong> La muestra dice «Ejemplo difícil de leer»: gris <code>#aaaaaa</code> sobre blanco.</figcaption>
+      </figure>
+    </div>
+    <p>Los valores se muestran con dos decimales; el umbral se compara con el resultado sin redondear. Esta comparación revisa solo esos pares de colores.</p>
+    <p class="sources"><a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">Contraste mínimo, cálculo y definición de texto grande en W3C (sitio externo)</a>.</p>
+  </div>
+</section>

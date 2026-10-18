@@ -1,0 +1,19 @@
+<section id="software-accesible" class="section-block software-section" aria-labelledby="titulo-software">
+  <p class="eyebrow"><span class="badge">Tecnología e inclusión</span> Herramientas para aprender</p>
+  <h2 id="titulo-software" class="section-heading">La información también se puede escuchar</h2>
+  <p class="section-intro">Los lectores de pantalla presentan el contenido mediante voz o una línea braille. Otras aplicaciones ayudan a reconocer textos y objetos. Conoce sus sitios oficiales.</p>
+  <article class="convertic-card">
+    <div><span class="badge">Una iniciativa de Colombia</span><h3>ConVerTic · Ministerio TIC</h3><p>Consulta la información oficial sobre acceso a software de apoyo para personas con discapacidad visual en Colombia, sus requisitos y condiciones vigentes.</p></div>
+    <a class="button" href="https://www.convertic.gov.co/">Conocer ConVerTic ↗</a>
+  </article>
+  <div class="card-grid two-columns">
+    {{ range hugo.Data.software }}
+      <article class="card resource-card">
+        <div class="software-card-heading"><h3>{{ .nombre }}</h3><span class="badge badge-blue">{{ .plataforma }}</span></div>
+        <p>{{ .descripcion }}</p>
+        <p class="software-note">{{ .nota }}</p>
+        <a class="button" href="{{ .url }}">{{ .enlace }} ↗</a>
+      </article>
+    {{ end }}
+  </div>
+</section>
